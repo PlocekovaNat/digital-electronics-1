@@ -1,4 +1,4 @@
-# Lab 1: Natalia Plocekova
+# Lab 1: Natalia Plocekova 
 
 ### De Morgan's laws
 
