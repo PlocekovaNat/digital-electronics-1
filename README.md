@@ -12,9 +12,7 @@
 
 Some basic Git commands are:
 ```
-git status
-git add
-git commit
+print("Hello world")
 ```
 
 ### LAB2
