@@ -1,9 +1,9 @@
 # Digital electronics 1
 *2.rocnik letny semester*
 
-##Laboratoria
+## Laboratoria
 
-###LAB1
+### LAB1
 - Github
 
 ###LAB2
