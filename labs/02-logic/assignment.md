@@ -92,9 +92,10 @@
         assert ((s_B_greater_A = '0') and
                 (s_B_equals_A  = '0') and
                 (s_B_less_A    = '1'))
-       -- If false, then report an error:
+	-- If false, then report an error
+	-- If true, then do not report anything
         report "Input combination ID numbers 0000, 0010 FAILED" severity error;
-       -- If true, then do not report anything
+       
        
        -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
