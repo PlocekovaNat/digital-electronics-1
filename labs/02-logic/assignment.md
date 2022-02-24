@@ -72,7 +72,7 @@
         report "Input combination 0000, 0001 FAILED" severity error;
 
 	-- MY SECOND TEST CASE (MISTAKE)
-		s_b <= "0000"; s_a <= "0011"; wait for 100 ns;
+	s_b <= "0000"; s_a <= "0011"; wait for 100 ns;
         -- ... and its expected outputs
         assert ((s_B_greater_A = '0') and
                 (s_B_equals_A  = '0') and
