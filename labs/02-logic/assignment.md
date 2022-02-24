@@ -36,8 +36,7 @@
 
    Greater than:
 
-![Greater](https://user-images.githubusercontent.com/99497162/155607665-f2eb4171-9a92-4b0f-bf06-32c0aa60903a.png)
-
+![Greater](https://user-images.githubusercontent.com/99497162/155610446-63b44b3f-d239-4853-92b6-be88490a5e8e.png)
 
    Less than:
    
