@@ -64,7 +64,27 @@
         -- Report a note at the beginning of stimulus process
         report "Stimulus process started" severity note;
 
-        -- First test case
+         -- MY FIRST TEST CASE (OK)
+        s_b <= "0000"; s_a <= "0001"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '1'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination 0000, 0001 FAILED" severity error;
+
+		-- MY FIRST TEST CASE (MISTAKE)
+		s_b <= "0000"; s_a <= "0011"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '0'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination 0000, 0011 FAILED" severity error;
+      
+        -- TEST FOR BCD_OF_YOUR_LAST_ID_DIGIT
         s_b <= "0000"; s_a <= "0010"; wait for 100 ns;
         -- ... and its expected outputs
         wait for 100 ns;
@@ -72,10 +92,14 @@
         assert ((s_B_greater_A = '0') and
                 (s_B_equals_A  = '0') and
                 (s_B_less_A    = '1'))
-       -- If true, then do not report anything
+       -- If false, then report an error:
         report "Input combination ID numbers 0000, 0010 FAILED" severity error;
-
+       -- If true, then do not report anything
        
+       -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        wait;
+        
     end process p_stimulus;
 ```
 
@@ -83,9 +107,6 @@
 
    ![your figure]()
 
-3. Link to your public EDA Playground example:
-
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
-   
+3. Link to your public EDA Playground example: 
    
    https://www.edaplayground.com/x/fpC8
