@@ -95,7 +95,6 @@
 	-- If true, then do not report anything
         report "Input combination ID numbers 0000, 0010 FAILED" severity error;
        
-       
        -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
         wait;
@@ -105,7 +104,7 @@
 
 2. Text console screenshot during your simulation, including reports.
 
-   ![your figure]()
+   ![Screenshot](https://user-images.githubusercontent.com/99497162/155611753-e3689b4e-672e-4d3b-bc4c-4f83c824f283.png)
 
 3. Link to your public EDA Playground example: 
    
