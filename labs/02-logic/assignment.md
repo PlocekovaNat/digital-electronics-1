@@ -35,6 +35,7 @@
 1. Karnaugh maps for other two functions:
 
    Greater than:
+   
 ![Greater](https://user-images.githubusercontent.com/99497162/155606842-715271b4-75db-4f3b-bd92-ede62f9bec26.png) 
 
    Less than:
