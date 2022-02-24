@@ -1,4 +1,4 @@
-# Lab 2: YOUR_FIRSTNAME LASTNAMEE
+# Lab 2: Combinational logic
 <a name="preparation"></a>
 
 ## Preparation tasks (done before the lab at home)
