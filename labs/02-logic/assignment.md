@@ -35,16 +35,17 @@
 1. Karnaugh maps for other two functions:
 
    Greater than:
-
-   ![K-maps](images/kmap_empty.png)
+![Greater](https://user-images.githubusercontent.com/99497162/155606842-715271b4-75db-4f3b-bd92-ede62f9bec26.png) 
 
    Less than:
-
-   ![K-maps](images/kmap_empty.png)
+   
+![Less](https://user-images.githubusercontent.com/99497162/155606929-df4121d8-8daf-43bf-a516-f9467dc2dcff.png)  
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+![SoP](https://user-images.githubusercontent.com/99497162/155606966-eb4bcce1-b0a4-4880-a47f-09f3f8e6470c.png)
+
+![PoS](https://user-images.githubusercontent.com/99497162/155607001-ec5f3f64-a8d7-4f3b-9009-174d714699cd.png) 
 
 ### 4-bit comparator
 
