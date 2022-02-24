@@ -36,17 +36,21 @@
 
    Greater than:
 
-![Greater](https://user-images.githubusercontent.com/99497162/155607275-5e5d7dad-47c7-4845-815f-ccf5f390f7ab.png)
+![Greater](https://user-images.githubusercontent.com/99497162/155607665-f2eb4171-9a92-4b0f-bf06-32c0aa60903a.png)
+
 
    Less than:
    
-![Less](https://user-images.githubusercontent.com/99497162/155606929-df4121d8-8daf-43bf-a516-f9467dc2dcff.png)  
+![Less](https://user-images.githubusercontent.com/99497162/155607701-bac53a25-0ced-4322-a6b6-fe498fdb56ad.png)
+ 
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-![SoP](https://user-images.githubusercontent.com/99497162/155606966-eb4bcce1-b0a4-4880-a47f-09f3f8e6470c.png)
+![SoP](https://user-images.githubusercontent.com/99497162/155607732-04d87883-e3e9-4287-bb3d-fab27188055c.png)
 
-![PoS](https://user-images.githubusercontent.com/99497162/155607001-ec5f3f64-a8d7-4f3b-9009-174d714699cd.png) 
+
+![PoS](https://user-images.githubusercontent.com/99497162/155607753-15401957-0c5a-4cd1-bd3a-ccd061fe6bcf.png)
+
 
 ### 4-bit comparator
 
