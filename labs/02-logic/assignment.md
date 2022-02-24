@@ -74,7 +74,7 @@
         -- If true, then do not report anything
         report "Input combination 0000, 0001 FAILED" severity error;
 
-		-- MY FIRST TEST CASE (MISTAKE)
+	-- MY SECOND TEST CASE (MISTAKE)
 		s_b <= "0000"; s_a <= "0011"; wait for 100 ns;
         -- ... and its expected outputs
         assert ((s_B_greater_A = '0') and
