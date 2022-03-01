@@ -44,3 +44,4 @@ end architecture Behavioral;
 ...
 ```
 
+https://www.edaplayground.com/x/m6tc
