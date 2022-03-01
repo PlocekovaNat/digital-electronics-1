@@ -2,6 +2,8 @@
 
 The Nexys A7 board provides sixteen switches and LEDs. The switches can be used to provide inputs, and the LEDs can be used as output devices.
 
+"The sixteen individual high-efficiency LEDs are anode-connected to the FPGA via 330-ohm resistors, so they will turn on when a logic high voltage is applied to their respective I/O pin. Additional LEDs that are not user-accessible indicate power-on, FPGA programming status, and USB and Ethernet port status."
+
 Nexys A7 board schematic:
 
 ![Nexys A7 board_schematic](https://user-images.githubusercontent.com/99497162/156175569-78577f22-3082-410c-909a-23279cfd31c7.png)
