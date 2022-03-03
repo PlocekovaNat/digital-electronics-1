@@ -18,15 +18,17 @@ Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-man
 ```vhdl
 architecture Behavioral of mux_3bit_4to1 is
 begin
-
-    -- WRITE YOUR CODE HERE
-
+f_o <= a_i when (sel_i = "00") else
+       b_i when (sel_i = "01") else 
+       c_i when (sel_i = "10") else 
+       d_i when (sel_i = "11");
 end architecture Behavioral;
 ```
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
+    (Time scale is longer because of two different test cases)
 
-   ![your figure]()
+![Screenshot with simulated time waveforms](https://user-images.githubusercontent.com/99497162/156581298-63b6d22e-f5ec-4dc8-a636-af559e904a3b.png)
 
 3. Listing of pin assignments for the Nexys A7 board in `nexys-a7-50t.xdc`. **DO NOT list** the whole file, just your switch and LED settings.
 
