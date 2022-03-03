@@ -21,15 +21,14 @@ begin
 f_o <= a_i when (sel_i = "00") else
        b_i when (sel_i = "01") else 
        c_i when (sel_i = "10") else 
-       d_i when (sel_i = "11");
+       d_i;
 end architecture Behavioral;
 ```
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
-    
+       link: https://www.edaplayground.com/x/qARj
        First test case:
 ![Screenshot_FirstCase](https://user-images.githubusercontent.com/99497162/156596379-ef08ed0f-8df5-4bb8-951b-f35b016fa42d.png)
-
        Second test case:
 ![Screenshot_SecondCase](https://user-images.githubusercontent.com/99497162/156582133-8a5721f3-97a2-4797-9808-81a5acad1291.png)
 
