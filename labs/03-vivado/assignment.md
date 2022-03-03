@@ -9,7 +9,7 @@ The sixteen individual high-efficiency LEDs are anode-connected to the FPGA via 
 Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1
 
 
-# Lab 3: YOUR_FIRSTNAME LASTNAMEE
+# Lab 3: VIVADO
 
 ### Three-bit wide 4-to-1 multiplexer
 
