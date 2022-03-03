@@ -25,7 +25,7 @@ end architecture Behavioral;
 ```
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
-       link: https://www.edaplayground.com/x/qARj
+link: https://www.edaplayground.com/x/qARj
        
 First test case:
 ![Screenshot_FirstCase](https://user-images.githubusercontent.com/99497162/156600148-b6a53049-abe5-4d12-bd64-ef55480a3b52.png)
