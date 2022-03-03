@@ -28,7 +28,8 @@ end architecture Behavioral;
        link: https://www.edaplayground.com/x/qARj
        
 First test case:
-![Screenshot_FirstCase](https://user-images.githubusercontent.com/99497162/156596379-ef08ed0f-8df5-4bb8-951b-f35b016fa42d.png)
+![Screenshot_FirstCase](https://user-images.githubusercontent.com/99497162/156600148-b6a53049-abe5-4d12-bd64-ef55480a3b52.png)
+
 Second test case:
 ![Screenshot_SecondCase](https://user-images.githubusercontent.com/99497162/156582133-8a5721f3-97a2-4797-9808-81a5acad1291.png)
 
