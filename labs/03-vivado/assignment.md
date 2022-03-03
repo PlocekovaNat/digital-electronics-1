@@ -27,9 +27,9 @@ end architecture Behavioral;
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
        link: https://www.edaplayground.com/x/qARj
        
-       First test case:
+First test case:
 ![Screenshot_FirstCase](https://user-images.githubusercontent.com/99497162/156596379-ef08ed0f-8df5-4bb8-951b-f35b016fa42d.png)
-       Second test case:
+Second test case:
 ![Screenshot_SecondCase](https://user-images.githubusercontent.com/99497162/156582133-8a5721f3-97a2-4797-9808-81a5acad1291.png)
 
 3. Listing of pin assignments for the Nexys A7 board in `nexys-a7-50t.xdc`. **DO NOT list** the whole file, just your switch and LED settings.
