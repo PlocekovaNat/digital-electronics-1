@@ -29,7 +29,7 @@ Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-man
    | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
    | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-##Assignment:
+## Assignment:
 1. Listing of VHDL stimulus process from testbench file (`tb_hex_7seg.vhd`) with asserts. Verify all input combinations. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
 ```vhdl
