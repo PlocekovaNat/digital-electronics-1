@@ -3,9 +3,11 @@
 
 The Nexys A7 board provides two four-digit common anode seven-segment LED displays (configured to behave like a single eight-digit display).
 
-1. See [schematic](https://github.com/tomas-fryza/digital-electronics-1/blob/master/docs/nexys-a7-sch.pdf) or [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) of the Nexys A7 board and find out the connection of 7-segment displays, ie to which FPGA pins are connected and how. Draw the schematic with 7-segment displays.
+1. Schematic of the Nexys A7 board and connection of 7-segment displays, ie to which FPGA pins are connected and how.
+![NexysA7_ 7-segmentdisplays](https://user-images.githubusercontent.com/99497162/156880918-3446852f-7aa6-448a-aa12-4d00a0e01804.png)
+Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1
 
-2. Complete the decoder truth table for **common anode** 7-segment display.
+2. Decoder truth table for **common anode** 7-segment display.
 
    | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
    | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -26,7 +28,7 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
    | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
    | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-
+##Assignment:
 1. Listing of VHDL stimulus process from testbench file (`tb_hex_7seg.vhd`) with asserts. Verify all input combinations. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
 ```vhdl
