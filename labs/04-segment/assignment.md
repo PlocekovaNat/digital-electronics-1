@@ -5,6 +5,7 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
 
 1. Schematic of the Nexys A7 board and connection of 7-segment displays, ie to which FPGA pins are connected and how.
 ![NexysA7_ 7-segmentdisplays](https://user-images.githubusercontent.com/99497162/156880918-3446852f-7aa6-448a-aa12-4d00a0e01804.png)
+
 Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1
 
 2. Decoder truth table for **common anode** 7-segment display.
