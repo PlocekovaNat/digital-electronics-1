@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Mar  1 16:00:52 2022">
+<application name="pa" timeStamp="Wed Mar  2 10:45:13 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="e04b38da76a24a45bedcfe2ce893edcd" type="ProjectID"/>
 <property name="ProjectIteration" value="2" type="ProjectIteration"/>
@@ -20,6 +20,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSources" value="2" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="1" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="FileExit" value="1" type="JavaHandler"/>
 <property name="LaunchProgramFpga" value="1" type="JavaHandler"/>
 <property name="NewProject" value="3" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="1" type="JavaHandler"/>
@@ -37,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CreateConstraintsFilePanel_FILE_NAME" value="1" type="GuiHandlerData"/>
 <property name="CreateSrcFileDialog_FILE_NAME" value="2" type="GuiHandlerData"/>
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="2" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="15" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="28" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="23" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_RESET_IMPLEMENTATION_RUN" value="1" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_FIT" value="2" type="GuiHandlerData"/>
@@ -79,9 +80,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="34" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="17" type="GuiMode"/>
+<property name="GuiMode" value="19" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="15" type="TclMode"/>
+<property name="TclMode" value="16" type="TclMode"/>
 </item>
 </section>
 </application>
