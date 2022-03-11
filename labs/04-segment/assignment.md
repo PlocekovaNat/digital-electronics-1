@@ -111,7 +111,8 @@ Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-man
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![image](https://user-images.githubusercontent.com/99497162/157264690-e6355d36-6235-4c15-81e8-344d414cadc6.png)
+  ![Simulated_Time_Waveforms](https://user-images.githubusercontent.com/99497162/157974614-45b22975-8636-43f7-8e23-7fe7a1699106.png)
+
 
 ### LED(7:4) indicators
 
@@ -121,15 +122,22 @@ Source: https://digilent.com/reference/programmable-logic/nexys-a7/reference-man
    --------------------------------------------------------------------
    -- Experiments on your own: LED(7:4) indicators
 
-   -- Turn LED(4) on if input value is equal to 0, ie "0000"
-   -- LED(4) <= `0` when WRITE YOUR CODE HERE
+    LED(4)    <= '1' when (SW ="0000" )
+                     else '0' ;
+              
+    -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
+    -- LED(5) <= WRITE YOUR CODE HERE
+    LED(5)    <= '1' when (SW > "1001")
+                     else '0';
 
-   -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
-   -- LED(5) <= WRITE YOUR CODE HERE
+    -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
+    LED(6) <= '1' when (SW(0) = '0')
+                  else '0';
 
-   -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
-   -- LED(6) <= WRITE YOUR CODE HERE
-
-   -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
-   -- LED(7) <= WRITE YOUR CODE HERE
+    -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
+    LED(7) <= '1' when (SW = "0001") else
+              '1' when (SW = "0010") else
+              '1' when (SW = "0100") else
+              '1' when (SW = "1000") else
+              '0'; 
    ```
