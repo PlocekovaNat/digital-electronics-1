@@ -87,13 +87,13 @@ begin
 
             -- WRITE YOUR CODE HERE
             when "1001" =>
-                seg_o <= "0010100";-- 9
+                seg_o <= "0000100";-- 9
 
             when "1010" =>
-                seg_o <= "0010010";-- A
+                seg_o <= "0001000";-- A
 
             when "1011" =>
-                seg_o <= "0010010";-- b
+                seg_o <= "1100000";-- b
 
             when "1100" =>
                 seg_o <= "0110001";-- C
