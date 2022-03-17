@@ -5,6 +5,7 @@ The Nexys A7 board provides five push buttons for user applications.
 1. See schematic of the Nexys A7 board and find out the connection of these push buttons, ie to which FPGA pins are connected and how. What logic/voltage value do the buttons generate when not pressed and what value when the buttons are pressed? Draw the schematic with push buttons.
 
 ![NexysA7_PushButtons](https://user-images.githubusercontent.com/99497162/158903399-ff7f4a10-ea12-4d95-b27f-8ccf436432fd.png)
+![NexysA7_PushButtons2](https://user-images.githubusercontent.com/99497162/158903651-4ae78e81-86ce-4982-b52c-5b997dea602d.png)
 
 
 2. Calculate how many periods of clock signal with frequency of 100&nbsp;MHz contain time intervals 2&nbsp;ms, 4&nbsp;ms, 10&nbsp;ms, 250&nbsp;ms, 500&nbsp;ms, and 1&nbsp;s. Write values in decimal, binary, and hexadecimal forms.
