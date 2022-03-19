@@ -91,6 +91,7 @@ end architecture Behavioral;
 1. Image and code of the shift register `top` level schematic:
 
 Netlist:
+
 ![Netlist](https://user-images.githubusercontent.com/99497162/159138957-3c0539ab-110a-4766-a2b6-544571330f77.png)
 
 Schematic:
@@ -100,7 +101,6 @@ VHDL code for the shift register `top` level schematic:
 ```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
 
 entity top is
     Port ( CLK100MHZv : in STD_LOGIC;
