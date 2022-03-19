@@ -89,8 +89,9 @@ end architecture Behavioral;
 ### Shift register
 
 1. Image and code of the shift register `top` level schematic:
-
+Netlist:
 ![Netlist](https://user-images.githubusercontent.com/99497162/159138957-3c0539ab-110a-4766-a2b6-544571330f77.png)
+Schematic:
 ![Schematics](https://user-images.githubusercontent.com/99497162/159138958-d97838fc-1822-451a-8b73-9a7fea7ae341.png)
 
 VHDL code for the shift register `top` level schematic:
