@@ -133,7 +133,7 @@ begin
           d     => SW(0)
       );
      LED(0) <= '1' when (s_ff0 ='1') 
-                    else '0';
+                   else '0';
      
      d_ff_1 : entity work.d_ff_rst
       port map(
@@ -144,7 +144,7 @@ begin
           d     => s_ff0
       );
      LED(1) <= '1' when (s_ff1 ='1') 
-                    else '0';
+                   else '0';
 
   -- PUT OTHER TWO FLIP-FLOP INSTANCES HERE
     d_ff_2 : entity work.d_ff_rst
@@ -156,7 +156,7 @@ begin
           d     => s_ff1
       );
      LED(2) <= '1' when (s_ff2 ='1') 
-                    else '0';
+                   else '0';
                     
     d_ff_3 : entity work.d_ff_rst
       port map(
@@ -167,7 +167,7 @@ begin
           d     => s_ff2
       );
      LED(3) <= '1' when (s_ff3 ='1') 
-                    else '0';                
+                   else '0';                
                                         
 end architecture Behavioral;
 ```
