@@ -10,7 +10,7 @@ Due to the physiological properties of human vision, it is necessary that the ti
 
 ![7-Segment-Display-Number-Formation-Segment-Contol](images/7-Segment-Display-Number-Formation-Segment-Contol.png)
 
-
+![Wavedrom_7-segment](images/wavedrom_7-segment.png)
   > The figure above was created in [WaveDrom](https://wavedrom.com/) digital timing diagram online tool. The figure source code is as follows:
   >
   ```javascript
