@@ -67,11 +67,16 @@ The Nexys A7 board provides five push buttons for user applications.
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
  - Simulated time waveforms:
-labs/06-counter/images/SimulatedTimeWaveforms.png
+ ![SimulatedTimeWaveforms](images/SimulatedTimeWaveforms.png)
+
 - Change of parameter `s_reset` 
+![ChangeOf-s_reset](images/ChangeOf-s_reset.png)
 
 - Change of parameter `s_en` 
+![ChangeOf-s_en](images/ChangeOf-s_en.png)
 
+- Change of parameter `s_cnt_up` 
+![ChangeOf-s_cnt_up](images/ChangeOf-s_cnt_up.png)
 ### Two counters
 
 1. Image of the top layer structure including both counters, ie a 4-bit bidirectional counter from *Part 4* and a 16-bit counter with a 10 ms time base from *Experiments on your own*. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components and internal signals!
