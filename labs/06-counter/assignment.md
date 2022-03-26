@@ -53,18 +53,24 @@ The Nexys A7 board provides five push buttons for user applications.
                 s_cnt_local <= (others => '0'); -- Clear all bits
 
             elsif (en_i = '1') then -- Test if counter is enabled
-
-                -- TEST COUNTER DIRECTION HERE
-
+               -- TEST COUNTER DIRECTION HERE
+                if (cnt_up_i = '1') then
                     s_cnt_local <= s_cnt_local + 1;
+                else 
+                    s_cnt_local <= s_cnt_local - 1;  
+                end if;     
+            
             end if;
         end if;
     end process p_cnt_up_down;
 ```
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
+ - Simulated time waveforms:
 
-   ![your figure]()
+- Change of parameter `s_reset` 
+
+- Change of parameter `s_en` 
 
 ### Two counters
 
