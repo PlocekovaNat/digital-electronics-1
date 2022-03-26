@@ -71,11 +71,11 @@ begin
     begin
         s_reset <= '0'; wait for 12 ns;
         -- Reset activated
-        s_reset <= '1'; wait for 20 ns;
-        
+        s_reset <= '1'; wait for 73 ns;
+        s_reset <= '0'; wait for 200 ns;
+        -- Reset activated
+        s_reset <= '1'; wait for 30 ns;
         -- Reset deactivated
-        s_reset <= '0'; wait for 100 ns;
-        s_reset <= '1'; wait for 40 ns;
         s_reset <= '0';
         wait;
     end process p_reset_gen;
@@ -89,27 +89,16 @@ begin
 
         -- Enable counting
         s_en     <= '1';
-        wait for 50 ns;
-        s_en     <= '0';
-        wait for 50 ns;  
-        s_en     <= '1';
-        wait for 50 ns;       
-        s_en     <= '0';
-        wait for 50 ns;
         
         -- Change counter direction
         s_cnt_up <= '1';
-        wait for 180 ns;
+        wait for 380 ns;
         s_cnt_up <= '0';
         wait for 220 ns;
-        s_cnt_up <= '1';
-        wait for 150 ns;
-        s_cnt_up <= '0';
-        wait for 200 ns;
 
-        -- Disable counting  
+        -- Disable counting
         s_en     <= '0';
-               
+
         report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
