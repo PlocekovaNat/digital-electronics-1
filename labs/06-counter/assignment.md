@@ -67,7 +67,7 @@ The Nexys A7 board provides five push buttons for user applications.
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
  - Simulated time waveforms:
-
+labs/06-counter/images/SimulatedTimeWaveforms.png
 - Change of parameter `s_reset` 
 
 - Change of parameter `s_en` 
