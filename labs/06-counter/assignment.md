@@ -79,9 +79,24 @@ The Nexys A7 board provides five push buttons for user applications.
 ![ChangeOf-s_cnt_up](images/ChangeOf-s_cnt_up.png)
 ### Two counters
 
-1. Image of the top layer structure including both counters, ie a 4-bit bidirectional counter from *Part 4* and a 16-bit counter with a 10 ms time base from *Experiments on your own*. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components and internal signals!
+1. Image of the top layer structure including both counters, ie a 4-bit bidirectional counter from *Part 4* and a 16-bit counter with a 10 ms time base:
 
    ![Schematic_TOP](images/Schematic_TOP.png)
+Different time base changed in `tb_cnt_up_down_16bit`:
+```vhdl
+architecture testbench of tb_cnt_up_down_16bit is
+
+    -- Number of bits for testbench counter
+    constant c_CNT_WIDTH         : natural := 16;
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ms;
+
+    --Local signals
+    signal s_clk_100MHz : std_logic;
+    signal s_reset      : std_logic;
+    signal s_en_16bit        : std_logic;
+    signal s_cnt_up     : std_logic;
+    signal s_cnt_16        : std_logic_vector(c_CNT_WIDTH - 1 downto 0);
+```
 
 VHDL code for the shift register `top` level schematic:
 ```vhdl
