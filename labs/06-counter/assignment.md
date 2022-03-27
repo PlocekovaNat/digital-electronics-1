@@ -12,7 +12,7 @@ The Nexys A7 board provides five push buttons for user applications.
 
 2. How many periods of clock signal with frequency of 100&nbsp;MHz contain time intervals 2&nbsp;ms, 4&nbsp;ms, 10&nbsp;ms, 250&nbsp;ms, 500&nbsp;ms, and 1&nbsp;s. Write values in decimal, binary, and hexadecimal forms.
 
-![NumberofClkPeriods](https://user-images.githubusercontent.com/99497162/160281374-53944488-15ed-4434-a2bd-8bbb0ca51e8d.png)
+![NumberofClkPeriods](https://user-images.githubusercontent.com/99497162/160281412-da9c64ab-12ab-49ec-ad7b-b30dc5a7d112.png)
 
    | **Time interval** | **Number of clk periods** | **Number of clk periods in hex** | **Number of clk periods in binary** |
    | :-: | :-: | :-: | :-: |
