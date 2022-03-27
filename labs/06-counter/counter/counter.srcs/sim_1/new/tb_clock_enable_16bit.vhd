@@ -15,27 +15,27 @@ use ieee.std_logic_1164.all;
 ------------------------------------------------------------
 -- Entity declaration for testbench
 ------------------------------------------------------------
-entity tb_clock_enable is
+entity tb_clock_enable_16bit is
     -- Entity of testbench is always empty
-end entity tb_clock_enable;
+end entity tb_clock_enable_16bit;
 
 ------------------------------------------------------------
 -- Architecture body for testbench
 ------------------------------------------------------------
-architecture testbench of tb_clock_enable is
+architecture testbench of tb_clock_enable_16bit is
 
     constant c_MAX               : natural := 5;
-    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ms;
 
     --Local signals
     signal s_clk_100MHz : std_logic;
     signal s_reset      : std_logic;
-    signal s_ce         : std_logic;
+    signal s_ce_16bit         : std_logic;
 
 begin
     -- Connecting testbench signals with clock_enable entity
     -- (Unit Under Test)
-    uut_ce : entity work.clock_enable
+    uut_ce : entity work.clock_enable_16bit
         generic map(
             g_MAX => c_MAX
         )   -- Note that there is NO comma or semicolon between
@@ -43,7 +43,7 @@ begin
         port map(
             clk   => s_clk_100MHz,
             reset => s_reset,
-            ce_o  => s_ce
+            ce_o_16bit  => s_ce_16bit
         );
 
     --------------------------------------------------------

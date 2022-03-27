@@ -32,7 +32,7 @@ use ieee.numeric_std.all;   -- Package for arithmetic operations
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity clock_enable is
+entity clock_enable_16bit is
     generic(
         g_MAX : natural := 10  -- Number of clk pulses to
                                -- generate one enable signal
@@ -42,14 +42,14 @@ entity clock_enable is
     port(
         clk   : in  std_logic; -- Main clock
         reset : in  std_logic; -- Synchronous reset
-        ce_o  : out std_logic  -- Clock enable pulse signal
+        ce_o_16bit  : out std_logic  -- Clock enable pulse signal
     );
-end entity clock_enable;
+end entity clock_enable_16bit;
 
 ------------------------------------------------------------
 -- Architecture body for clock enable
 ------------------------------------------------------------
-architecture Behavioral of clock_enable is
+architecture Behavioral of clock_enable_16bit is
 
     -- Local counter
     signal s_cnt_local : natural;
@@ -66,18 +66,19 @@ begin
 
             if (reset = '1') then   -- High active reset
                 s_cnt_local <= 0;   -- Clear local counter
-                ce_o        <= '0'; -- Set output to low
+                ce_o_16bit        <= '0'; -- Set output to low
 
             -- Test number of clock periods
             elsif (s_cnt_local >= (g_MAX - 1)) then
                 s_cnt_local <= 0;   -- Clear local counter
-                ce_o        <= '1'; -- Generate clock enable pulse
+                ce_o_16bit        <= '1'; -- Generate clock enable pulse
 
             else
                 s_cnt_local <= s_cnt_local + 1;
-                ce_o        <= '0';
-            end if;
+                ce_o_16bit        <= '0';
+            end if;  
         end if;
     end process p_clk_ena;
 
 end architecture Behavioral;
+

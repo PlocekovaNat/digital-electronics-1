@@ -34,8 +34,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top is
     Port ( CLK100MHZ : in STD_LOGIC;
            SW : in STD_LOGIC;
+           SW_16bit : in STD_LOGIC;
            BTNC : in STD_LOGIC; 
-           LED : out STD_LOGIC_VECTOR (3 downto 0);
+           LED : out STD_LOGIC_VECTOR (15 downto 0);
            CA : out STD_LOGIC;
            CB : out STD_LOGIC;
            CC : out STD_LOGIC;
@@ -51,9 +52,11 @@ architecture Behavioral of top is
 
  -- Internal clock enable
     signal s_en  : std_logic;
+    signal s_en_16bit  : std_logic;
   -- Internal counter
     signal s_cnt : std_logic_vector(4 - 1 downto 0);
-  
+    signal s_cnt_16 : std_logic_vector(16 - 1 downto 0);
+    
 begin
 --------------------------------------------------------------------
   -- Instance (copy) of clock_enable entity
@@ -66,7 +69,16 @@ begin
           reset => BTNC,
           ce_o  => s_en
       );
-
+      
+  clk_en_16bit : entity work.clock_enable_16bit
+      generic map(
+          g_MAX => 1000000
+      )
+      port map(
+          clk   => CLK100MHZ,
+          reset => BTNC,
+          ce_o_16bit  => s_en_16bit
+      );
   --------------------------------------------------------------------
   -- Instance (copy) of cnt_up_down entity
   bin_cnt0 : entity work.cnt_up_down
@@ -80,6 +92,18 @@ begin
           cnt_up_i => SW,
           cnt_o   => s_cnt
       );
+      
+   bin_cnt1 : entity work.cnt_up_down_16bit
+     generic map(
+          g_CNT_WIDTH => 16
+      )
+      port map(
+          clk   => CLK100MHZ,
+          reset => BTNC,
+          en_i_16bit  => s_en_16bit,
+          cnt_up_i => SW_16bit,
+          cnt_o_16   => s_cnt_16
+      );     
 
   --------------------------------------------------------------------
   -- Instance (copy) of hex_7seg entity
@@ -94,15 +118,12 @@ begin
           seg_o(1) => CF,
           seg_o(0) => CG
       );
-
+  
   -- Connect one common anode to 3.3V
   AN <= b"1111_1100";
 
   -- Display counter values on LEDs
-  LED(3 downto 0) <= s_cnt;
-  
-  
-
+  LED(15 downto 0) <= s_cnt_16;
 
 end architecture Behavioral;
 
