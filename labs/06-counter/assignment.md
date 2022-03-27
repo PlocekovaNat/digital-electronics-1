@@ -82,6 +82,7 @@ The Nexys A7 board provides five push buttons for user applications.
 1. Image of the top layer structure including both counters, ie a 4-bit bidirectional counter from *Part 4* and a 16-bit counter with a 10 ms time base:
 
    ![Schematic_TOP](images/Schematic_TOP.png)
+   
 Different time base changed in `tb_cnt_up_down_16bit`:
 ```vhdl
 architecture testbench of tb_cnt_up_down_16bit is
