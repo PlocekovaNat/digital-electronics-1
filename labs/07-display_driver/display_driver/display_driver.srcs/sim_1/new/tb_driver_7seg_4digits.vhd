@@ -92,6 +92,13 @@ begin
 
         -- Reset deactivated
         s_reset <= '0';
+        wait for 59 ns;
+        
+        
+        s_reset <= '1';
+        wait for 76 ns;
+        
+        s_reset <= '0';
         wait;
     end process p_reset_gen;
     --------------------------------------------------------
@@ -100,13 +107,14 @@ begin
     -- WRITE YOUR CODE HERE AND TEST INPUT VALUE "3.142"
     p_stimulus : process
     begin
-        s_data0 <= "0011";
-        s_data1 <= "0001";
-        s_data2 <= "0100";
-        s_data3 <= "0010";
+        report "Stimulus process started" severity note;
+        s_data3 <= "0011";
+        s_data2 <= "0001";
+        s_data1 <= "0100";
+        s_data0 <= "0010";
         s_dp_i <= "0111";
         --wait for 100 ns;
-        
+        report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
 
