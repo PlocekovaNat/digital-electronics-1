@@ -96,5 +96,5 @@ Due to the physiological properties of human vision, it is necessary that the ti
 ### Eight-digit driver
 
 1. Image of the 8-digit driver's block schematic. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components and internal signals!
-
-   ![your figure]()
+    
+   ![Schematic_8bit](images/Schematic_8bit.png)
