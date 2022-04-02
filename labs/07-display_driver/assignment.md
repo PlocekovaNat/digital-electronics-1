@@ -157,52 +157,53 @@ Due to the physiological properties of human vision, it is necessary that the ti
    ```
    
    `tb_driver_7seg_8digits`:
-   ```vhdl
    
-library ieee;
-use ieee.std_logic_1164.all;
+```vhdl
+   
+  library ieee;
+  use ieee.std_logic_1164.all;
 
-------------------------------------------------------------
--- Entity declaration for testbench
-------------------------------------------------------------
-entity tb_driver_7seg_8digits is
-    -- Entity of testbench is always empty
-end entity tb_driver_7seg_8digits;
+  ------------------------------------------------------------
+  -- Entity declaration for testbench
+  ------------------------------------------------------------
+  entity tb_driver_7seg_8digits is
+      -- Entity of testbench is always empty
+  end entity tb_driver_7seg_8digits;
 
-------------------------------------------------------------
--- Architecture body for testbench
-------------------------------------------------------------
-architecture testbench of tb_driver_7seg_8digits is
+  ------------------------------------------------------------
+  -- Architecture body for testbench
+  ------------------------------------------------------------
+  architecture testbench of tb_driver_7seg_8digits is
 
-    -- Local constants
-    constant c_CLK_100MHZ_PERIOD : time := 10 ns;
+    -- Local constants  
+      constant c_CLK_100MHZ_PERIOD : time := 10 ns;
 
     -- Local signals
-    signal s_clk_100MHz : std_logic;
-    signal s_reset : std_logic;
+      signal s_clk_100MHz : std_logic;
+      signal s_reset : std_logic;
     -- ADD OTHER SIGNALS ACCORDING TO DRIVER_7SEG_4DIGITS ENTITY
     -- signal s_data0 : ...
-    signal s_data0 : std_logic_vector(4-1 downto 0);
-    signal s_data1 : std_logic_vector(4 - 1 downto 0);
-    signal s_data2 : std_logic_vector(4 - 1 downto 0);
-    signal s_data3 : std_logic_vector(4 - 1 downto 0);
-    signal s_data4 : std_logic_vector(4 - 1 downto 0);
-    signal s_data5 : std_logic_vector(4 - 1 downto 0);
-    signal s_data6 : std_logic_vector(4 - 1 downto 0);
-    signal s_data7 : std_logic_vector(4 - 1 downto 0);
-    signal s_dp_i : std_logic_vector(8 - 1 downto 0);
-    signal s_seg_o : std_logic_vector(7 - 1 downto 0);
-    signal s_dp_o : std_logic;
-    signal s_dig_o : std_logic_vector(8 - 1 downto 0);
+      signal s_data0 : std_logic_vector(4-1 downto 0);
+      signal s_data1 : std_logic_vector(4 - 1 downto 0);
+      signal s_data2 : std_logic_vector(4 - 1 downto 0);
+      signal s_data3 : std_logic_vector(4 - 1 downto 0);
+      signal s_data4 : std_logic_vector(4 - 1 downto 0);
+      signal s_data5 : std_logic_vector(4 - 1 downto 0);
+      signal s_data6 : std_logic_vector(4 - 1 downto 0);
+      signal s_data7 : std_logic_vector(4 - 1 downto 0);
+      signal s_dp_i : std_logic_vector(8 - 1 downto 0);
+      signal s_seg_o : std_logic_vector(7 - 1 downto 0);
+      signal s_dp_o : std_logic;
+      signal s_dig_o : std_logic_vector(8 - 1 downto 0);
 
-begin
-    -- Connecting testbench signals with driver_7seg_4digits
-    -- entity (Unit Under Test)
-    -- MAP I/O PORTS FROM ENTITY TO LOCAL SIGNALS
-    -- uut_driver_7seg_4digits : entity work....
-    -- Connecting testbench signals with clock_enable entity
-    -- (Unit Under Test)
-    uut_ce : entity work.driver_7seg_8digits
+  begin
+      -- Connecting testbench signals with driver_7seg_4digits
+      -- entity (Unit Under Test)
+      -- MAP I/O PORTS FROM ENTITY TO LOCAL SIGNALS
+      -- uut_driver_7seg_4digits : entity work....
+      -- Connecting testbench signals with clock_enable entity
+      -- (Unit Under Test)
+     uut_ce : entity work.driver_7seg_8digits
         port map(
             clk   => s_clk_100MHz,
             reset => s_reset,
