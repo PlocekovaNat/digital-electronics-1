@@ -97,4 +97,188 @@ Due to the physiological properties of human vision, it is necessary that the ti
 
 1. Image of the 8-digit driver's block schematic. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components and internal signals!
     
-   ![Schematic_8bit](images/Schematic_8bit.png)
+   ![Schematic_8digits](images/Schematic_8digits.png)
+   
+   `driver_7seg_8digits`:
+   ```vhdl
+    p_mux : process(clk)
+    begin
+        if rising_edge(clk) then
+            if (reset = '1') then
+                s_hex <= data0_i;
+                dp_o  <= dp_i(0);
+                dig_o <= "11111110";
+            else
+                case s_cnt is
+                    when "111" =>
+                        s_hex <= data7_i;
+                        dp_o  <= dp_i(7);
+                        dig_o <= "01111111";
+                        
+                    when "110" =>
+                        s_hex <= data6_i;
+                        dp_o  <= dp_i(6);
+                        dig_o <= "10111111";
+                    
+                    when "101" =>
+                        s_hex <= data5_i;
+                        dp_o  <= dp_i(5);
+                        dig_o <= "11011111";
+                        
+                    when "100" =>
+                        s_hex <= data4_i;
+                        dp_o  <= dp_i(4);
+                        dig_o <= "11101111";
+                                    
+                    when "011" =>
+                        s_hex <= data3_i;
+                        dp_o  <= dp_i(3);
+                        dig_o <= "11110111";
+
+                    when "010" =>
+                        s_hex <= data2_i;
+                        dp_o  <= dp_i(2);
+                        dig_o <= "11111011";
+
+                    when "001" =>
+                        s_hex <= data1_i;
+                        dp_o  <= dp_i(1);
+                        dig_o <= "11111101";
+
+                    when others =>
+                        s_hex <= data0_i;
+                        dp_o  <= dp_i(0);
+                        dig_o <= "11111110";
+                end case;
+            end if;
+        end if;
+    end process p_mux;
+
+   ```
+   
+   `tb_driver_7seg_8digits`:
+   ```vhdl
+   
+library ieee;
+use ieee.std_logic_1164.all;
+
+------------------------------------------------------------
+-- Entity declaration for testbench
+------------------------------------------------------------
+entity tb_driver_7seg_8digits is
+    -- Entity of testbench is always empty
+end entity tb_driver_7seg_8digits;
+
+------------------------------------------------------------
+-- Architecture body for testbench
+------------------------------------------------------------
+architecture testbench of tb_driver_7seg_8digits is
+
+    -- Local constants
+    constant c_CLK_100MHZ_PERIOD : time := 10 ns;
+
+    -- Local signals
+    signal s_clk_100MHz : std_logic;
+    signal s_reset : std_logic;
+    -- ADD OTHER SIGNALS ACCORDING TO DRIVER_7SEG_4DIGITS ENTITY
+    -- signal s_data0 : ...
+    signal s_data0 : std_logic_vector(4-1 downto 0);
+    signal s_data1 : std_logic_vector(4 - 1 downto 0);
+    signal s_data2 : std_logic_vector(4 - 1 downto 0);
+    signal s_data3 : std_logic_vector(4 - 1 downto 0);
+    signal s_data4 : std_logic_vector(4 - 1 downto 0);
+    signal s_data5 : std_logic_vector(4 - 1 downto 0);
+    signal s_data6 : std_logic_vector(4 - 1 downto 0);
+    signal s_data7 : std_logic_vector(4 - 1 downto 0);
+    signal s_dp_i : std_logic_vector(8 - 1 downto 0);
+    signal s_seg_o : std_logic_vector(7 - 1 downto 0);
+    signal s_dp_o : std_logic;
+    signal s_dig_o : std_logic_vector(8 - 1 downto 0);
+
+begin
+    -- Connecting testbench signals with driver_7seg_4digits
+    -- entity (Unit Under Test)
+    -- MAP I/O PORTS FROM ENTITY TO LOCAL SIGNALS
+    -- uut_driver_7seg_4digits : entity work....
+    -- Connecting testbench signals with clock_enable entity
+    -- (Unit Under Test)
+    uut_ce : entity work.driver_7seg_8digits
+        port map(
+            clk   => s_clk_100MHz,
+            reset => s_reset,
+            data0_i => s_data0,
+            data1_i => s_data1,
+            data2_i => s_data2,
+            data3_i => s_data3,
+            data4_i => s_data4,
+            data5_i => s_data5,
+            data6_i => s_data6,
+            data7_i => s_data7,
+            dp_i => s_dp_i,
+            dp_o => s_dp_o,
+            seg_o => s_seg_o,
+            dig_o => s_dig_o
+        );
+    
+    --------------------------------------------------------
+    -- Clock generation process
+    --------------------------------------------------------
+    p_clk_gen : process
+    begin
+        while now < 750 ns loop -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+
+    --------------------------------------------------------
+    -- Reset generation process
+    --------------------------------------------------------
+    -- WRITE YOUR CODE HERE AND ACTIVATE RESET FOR A WHILE
+    
+     p_reset_gen : process
+     begin
+        s_reset <= '0';
+        wait for 28 ns;
+        
+        -- Reset activated
+        s_reset <= '1';
+        wait for 153 ns;
+
+        -- Reset deactivated
+        s_reset <= '0';
+        wait for 59 ns;
+        
+        
+        s_reset <= '1';
+        wait for 76 ns;
+        
+        s_reset <= '0';
+        wait;
+    end process p_reset_gen;
+    --------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------
+    -- WRITE YOUR CODE HERE AND TEST INPUT VALUE "3.142"
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        s_data7 <= "0011";
+        s_data6 <= "0001";
+        s_data5 <= "0100";
+        s_data4 <= "0010";
+        s_data3 <= "0011";
+        s_data2 <= "0001";
+        s_data1 <= "0100";
+        s_data0 <= "0010";
+        s_dp_i <= "01110111";
+        --wait for 100 ns;
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+
+end architecture testbench;
+   ```
