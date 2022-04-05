@@ -116,4 +116,14 @@
 
 3. Screenshot with simulated time waveforms. The full functionality of the entity must be verified. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+   Reset on:
+   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.PNG)
+   
+   Part of time scale:
+   ![SimulatedTimeWaveforms](images/SimulatedTimeWaveforms.PNG)
+   
+   Whole time scale - 2000 ns:
+   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.PNG)
+   
+   With c_en:  
+   ![SimulatedTimeWaveforms_C_EN](images/SimulatedTimeWaveforms_C_EN.PNG)
