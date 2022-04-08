@@ -19,8 +19,8 @@
 # Lab 8: Traffic light controller
 
 1. Figure of traffic light controller state diagram. The image can be drawn on a computer or by hand. Always name all states, transitions, and input signals!
-
-   ![your figure]()
+   
+   ![StateDiagram](images/StateDiagram.png)
 
 2. Listing of VHDL code of the completed process `p_traffic_fsm`. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
@@ -117,13 +117,13 @@
 3. Screenshot with simulated time waveforms. The full functionality of the entity must be verified. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
    Reset on:
-   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.PNG)
+   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.png)
    
    Part of time scale:
-   ![SimulatedTimeWaveforms](images/SimulatedTimeWaveforms.PNG)
+   ![SimulatedTimeWaveforms](images/SimulatedTimeWaveforms.png)
    
    Whole time scale - 2000 ns:
-   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.PNG)
+   ![SimulatedTimeWaveforms_RESET](images/SimulatedTimeWaveforms_RESET.png)
    
    With c_en:  
-   ![SimulatedTimeWaveforms_C_EN](images/SimulatedTimeWaveforms_C_EN.PNG)
+   ![SimulatedTimeWaveforms_C_EN](images/SimulatedTimeWaveforms_C_EN.png)
